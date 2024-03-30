@@ -5,18 +5,6 @@ __version__ = '1.0'
 import pathlib
 import pandas as pd
 import pickle
-from sklearn.preprocessing import OrdinalEncoder
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.preprocessing import Binarizer
-from sklearn.preprocessing import MinMaxScaler
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import HistGradientBoostingRegressor
-
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer
-from sklearn.compose import make_column_transformer
-from sklearn.pipeline import make_pipeline
 
 path_dir = pathlib.Path(__name__).parent.resolve()
 # Data processing functions
