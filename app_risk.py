@@ -2,7 +2,7 @@ import pathlib
 import pandas as pd
 import streamlit as st
 from streamlit_echarts import st_echarts
-from executionmodelrisk import get_expected_loss
+from executionmodelrisk import *
 
 path_dir = pathlib.Path(__name__).parent.resolve()
 # Page settings
