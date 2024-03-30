@@ -1,4 +1,4 @@
+pickle
 pandas
 streamlit
 streamlit_echarts
-pickle
