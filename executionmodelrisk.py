@@ -4,7 +4,6 @@
 __version__ = '1.0'
 import pathlib
 import pandas as pd
-import pickle
 
 path_dir = pathlib.Path(__name__).parent.resolve()
 # Data processing functions
@@ -28,19 +27,19 @@ def get_expected_loss(df):
     full_path = path_dir / 'execution_pipe_pd.pickle'
     full_path = full_path.resolve() 
     with open(str(full_path), mode='rb') as file:
-        execution_pipe_pd = pickle.load(file)
+        execution_pipe_pd = pd.read_pickle(file)
 
     # Exposure at Default (EAD)
     full_path = path_dir / 'execution_pipe_ead.pickle'
     full_path = full_path.resolve()
     with open(str(full_path), mode='rb') as file:
-        execution_pipe_ead = pickle.load(file)
+        execution_pipe_ead = pd.read_pickle(file)
 
     # Loss Given Default (LGD)
     full_path = path_dir / 'execution_pipe_lgd.pickle'
     full_path = full_path.resolve()
     with open(str(full_path), mode='rb') as file:
-        execution_pipe_lgd = pickle.load(file)
+        execution_pipe_lgd = pd.read_pickle(file)
     
     # Execution
     scoring_pd = execution_pipe_pd.predict_proba(x)[:, 1]
