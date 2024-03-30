@@ -1,4 +1,4 @@
-pandas
-scikit_learn
-streamlit
-streamlit_echarts
+pandas==2.2.1
+scikit_learn==1.3.0
+streamlit==1.32.2
+streamlit_echarts==0.4.0
