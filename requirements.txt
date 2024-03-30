@@ -1,3 +1,4 @@
 pandas
+scikit_learn
 streamlit
 streamlit_echarts
